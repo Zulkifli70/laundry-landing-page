@@ -3,3 +3,10 @@
 :root {
   --header-height: 5em;
 }
+
+@theme {
+  --color-jojo-pink: #ff6b8b;
+  --color-jojo-pink-light: #fff0f5;
+  --color-jojo-dark: #222222;
+  --color-jojo-gray: #555555;
+}

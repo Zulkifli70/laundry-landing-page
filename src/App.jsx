@@ -19,11 +19,18 @@ function App() {
         ease: "power3.out",
       });
 
-      gsap.from(".hero-copy > *", {
+      gsap.from(".hero-copy > :not(.hero-cta)", {
         opacity: 0,
         y: 28,
         duration: 0.8,
         stagger: 0.12,
+        ease: "power3.out",
+      });
+
+      gsap.from(".hero-cta", {
+        y: 16,
+        scale: 0.98,
+        duration: 0.7,
         ease: "power3.out",
       });
 
@@ -81,8 +88,8 @@ function App() {
   ];
   return (
     <>
-      <header className="flex justify-center h-(--header-height) border-y fixed top-0 left-0 right-0 z-20 backdrop-blur-sm">
-        <div className="flex items-center justify-between w-full h-full md:max-w-7xl px-7">
+      <header className="flex justify-center h-(--header-height) shadow-lg fixed top-0 left-0 right-0 z-20 backdrop-blur-sm">
+        <div className="flex items-center justify-between w-full h-full md:max-w-4/5 px-7">
           <div className="flex items-center gap-2">
             <img src="/logo.png" alt="logo" className="w-25 md:w-35" />
           </div>
@@ -147,45 +154,53 @@ function App() {
           ))}
         </nav>
       </div>
-      {/* flex h-screen flex-col gap-5 px-6 pb-5 pt-[calc(var(--header-height)+.5em)] md:flex-row-reverse md:items-center md:justify-center md:gap-10 md:px-10 lg:gap-16 lg:px-15 */}
+
       <main ref={mainRef}>
-        <section className="flex justify-center h-screen w-screen pt-[calc(var(--header-height))] ">
-          <div className="h-full flex flex-col gap-2 py-1 px-3 md:gap-8 md:max-w-7xl md:flex-row-reverse md:items-center-safe">
-            <div
-              className="hero-media border-bs-indigo-300
-             flex-3 min-h-0 w-full rounded-lg overflow-hidden md:h-[min(62vh,34rem)] md:min-w-0 md:flex-[1.1_1_0] lg:flex-[1.25_1_0]"
-            >
+        <section className="flex min-h-screen justify-center overflow-hidden bg-linear-to-b from-white via-white to-jojo-pink-light pt-(--header-height)">
+          <div className="flex w-full max-w-7xl flex-col items-center justify-center gap-6 px-6 py-8 sm:px-8 md:flex-row-reverse md:gap-10 md:py-12 lg:gap-16">
+            <div className="hero-media flex w-full justify-center md:flex-1">
               <img
-                src="/hero.png"
+                src="/hero4.png"
                 alt="hero image"
-                className="w-full h-full object-cover"
+                className="h-[38vh] max-h-80 w-full object-contain drop-shadow-[0_24px_45px_rgba(255,107,139,0.16)] sm:h-[42vh] md:h-[min(62vh,35rem)] md:max-h-none"
               />
             </div>
-            <div className="hero-copy py-4 flex-2 flex flex-col items-center gap-8 text-center md:min-w-0 md:flex-[0.9_1_0] md:gap-15 md:items-start md:text-start">
-              <div className="flex flex-col gap-5">
-                <h1 className="text-2xl font-extrabold md:max-w-xl md:text-5xl lg:text-6xl">
-                  Cucian Numpuk? Biar Jojo Laundry Yang Beresin!
+            <div className="hero-copy flex w-full max-w-xl flex-col items-center gap-6 text-center md:flex-1 md:items-start md:text-start">
+              <div className="flex flex-col gap-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-jojo-pink">
+                  Laundry express Malang
+                </p>
+                <h1 className="text-3xl font-extrabold leading-tight text-jojo-dark sm:text-4xl md:text-5xl lg:text-6xl">
+                  Cucian Numpuk?
+                  <span className="block text-jojo-pink">
+                    Jojo yang beresin.
+                  </span>
                 </h1>
+                <p className="mx-auto max-w-md text-sm leading-7 text-jojo-gray sm:text-base md:mx-0">
+                  Jemput, cuci, setrika, dan antar kembali dengan hasil bersih
+                  rapi tanpa mengganggu jadwal harianmu.
+                </p>
               </div>
 
-              <button className="flex gap-5 border px-10 py-3 rounded-3xl max-w-fit">
-                <Truck />
-                Pesan Laundry Sekarang!
+              <button className="hero-cta flex min-h-12 w-full max-w-xs items-center justify-center gap-3 rounded-full border border-[#f94772] bg-[#ff4f78] px-7 py-3 text-sm font-bold text-white shadow-[0_12px_28px_rgba(255,79,120,0.32)] transition hover:-translate-y-0.5 hover:bg-[#f94772] active:translate-y-0 active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-pink-200 sm:w-auto">
+                <Truck size={20} />
+                Pesan sekarang
               </button>
 
-              <div className="flex md:w-9/10 gap-1 md:mt-10 text-center max-w-lg">
-                <div
-                  className="flex-1 flex items-center gap-5 border rounded-lg p-2
-                "
-                >
-                  <Truck className="flex-1" />
-                  <h4 className="font-bold text-sm flex-3">
-                    Gratis Antar Jemput Area Malang Kota
+              <div className="grid w-full max-w-lg grid-cols-1 gap-3 pt-2 text-left sm:grid-cols-2">
+                <div className="flex items-center gap-3 rounded-2xl border border-pink-100 bg-white/75 p-4 shadow-sm">
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-pink-50 text-jojo-pink">
+                    <Truck size={20} />
+                  </span>
+                  <h4 className="text-sm font-bold leading-5 text-jojo-dark">
+                    Gratis antar jemput area Malang Kota
                   </h4>
                 </div>
-                <div className="flex-1 flex items-center gap-5 border rounded-lg p-2">
-                  <Zap className="flex-1" />
-                  <h4 className="font-bold text-sm flex-3">
+                <div className="flex items-center gap-3 rounded-2xl border border-pink-100 bg-white/75 p-4 shadow-sm">
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-pink-50 text-jojo-pink">
+                    <Zap size={20} />
+                  </span>
+                  <h4 className="text-sm font-bold leading-5 text-jojo-dark">
                     8 Jam Layanan Kilat
                   </h4>
                 </div>
