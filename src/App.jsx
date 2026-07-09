@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Truck, Zap } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -149,34 +150,44 @@ function App() {
       {/* flex h-screen flex-col gap-5 px-6 pb-5 pt-[calc(var(--header-height)+.5em)] md:flex-row-reverse md:items-center md:justify-center md:gap-10 md:px-10 lg:gap-16 lg:px-15 */}
       <main ref={mainRef}>
         <section className="flex justify-center h-screen w-screen pt-[calc(var(--header-height))] ">
-          <div className="h-full flex flex-col gap-8 py-1 px-3 md:max-w-7xl md:flex-row-reverse md:items-center-safe">
-            <div className="hero-media flex-3 min-h-0 w-full rounded-xl overflow-hidden md:h-[min(62vh,34rem)] md:min-w-0 md:flex-[1.1_1_0] lg:flex-[1.25_1_0]">
+          <div className="h-full flex flex-col gap-2 py-1 px-3 md:gap-8 md:max-w-7xl md:flex-row-reverse md:items-center-safe">
+            <div
+              className="hero-media border-bs-indigo-300
+             flex-3 min-h-0 w-full rounded-lg overflow-hidden md:h-[min(62vh,34rem)] md:min-w-0 md:flex-[1.1_1_0] lg:flex-[1.25_1_0]"
+            >
               <img
                 src="/hero.png"
                 alt="hero image"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="hero-copy flex-2 flex flex-col gap-4 text-center md:min-w-0 md:flex-[0.9_1_0] md:gap-7 md:text-start lg:gap-10">
-              <h1 className="text-2xl font-bold md:max-w-xl md:text-4xl lg:text-5xl">
-                Solusi Cuci Bersih & Wangi
-              </h1>
-              <p className="text-lg md:max-w-lg">
-                Kami hadir untuk memberikan solusi mencuci yang higienis dan
-                profesional. Nikmati waktu Anda selagi kami merawat pakaian
-                kesayangan Anda dengan sepenuh hati.
-              </p>
-              <button className="w-full text-center border p-3 rounded-xl max-w-lg">
-                Lihat Layanan
+            <div className="hero-copy py-4 flex-2 flex flex-col items-center gap-8 text-center md:min-w-0 md:flex-[0.9_1_0] md:gap-15 md:items-start md:text-start">
+              <div className="flex flex-col gap-5">
+                <h1 className="text-2xl font-extrabold md:max-w-xl md:text-5xl lg:text-6xl">
+                  Cucian Numpuk? Biar Jojo Laundry Yang Beresin!!
+                </h1>
+              </div>
+
+              <button className="flex gap-5 border px-10 py-3 rounded-3xl max-w-fit">
+                <Truck />
+                Pesan Laundry Sekarang!
               </button>
-              <div className="flex w-full gap-2 text-center max-w-lg">
-                <div className="flex-1 align-middle">
-                  <h4 className="font-extrabold flex items-center justify-center">
+
+              <div className="flex md:w-9/10 gap-1 md:mt-10 text-center max-w-lg">
+                <div
+                  className="flex-1 flex items-center gap-5 border rounded-lg p-2
+                "
+                >
+                  <Truck className="flex-1" />
+                  <h4 className="font-bold text-sm flex-3">
                     Gratis Antar Jemput Area Malang Kota
                   </h4>
                 </div>
-                <div className="flex-1 flex items-center justify-center">
-                  <h4 className="font-extrabold">8 Jam Layanan Kilat</h4>
+                <div className="flex-1 flex items-center gap-5 border rounded-lg p-2">
+                  <Zap className="flex-1" />
+                  <h4 className="font-bold text-sm flex-3">
+                    8 Jam Layanan Kilat
+                  </h4>
                 </div>
               </div>
             </div>
