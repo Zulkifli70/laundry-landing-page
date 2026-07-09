@@ -164,7 +164,7 @@ function App() {
             <div className="hero-copy py-4 flex-2 flex flex-col items-center gap-8 text-center md:min-w-0 md:flex-[0.9_1_0] md:gap-15 md:items-start md:text-start">
               <div className="flex flex-col gap-5">
                 <h1 className="text-2xl font-extrabold md:max-w-xl md:text-5xl lg:text-6xl">
-                  Cucian Numpuk? Biar Jojo Laundry Yang Beresin!!
+                  Cucian Numpuk? Biar Jojo Laundry Yang Beresin!
                 </h1>
               </div>
 
