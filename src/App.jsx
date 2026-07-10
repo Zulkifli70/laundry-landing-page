@@ -84,7 +84,6 @@ function App() {
     { label: "Jojo Laundry", href: "#" },
     { label: "Services", href: "#" },
     { label: "Location", href: "#" },
-    { label: "Contact Us", href: "#" },
   ];
 
   const serviceItems = [
@@ -301,20 +300,7 @@ function App() {
           </div>
         </section>
         <section className="layer-section flex min-h-screen items-center justify-center bg-amber-50 px-6 py-[calc(var(--header-height)+1em)] md:sticky md:top-0 md:h-screen md:py-0">
-          <div className="layer-card grid w-full max-w-5xl gap-5 rounded-3xl bg-white p-8 shadow-2xl shadow-amber-200/60 md:grid-cols-[1fr_1.2fr] md:p-12">
-            <div className="flex flex-col justify-center gap-3">
-              <p className="text-sm font-semibold uppercase tracking-wide text-amber-700">
-                Antar Jemput
-              </p>
-              <h1 className="layer-title text-3xl font-bold text-gray-950 md:text-5xl">
-                Tinggal Chat, Kami Datang
-              </h1>
-            </div>
-            <p className="text-lg leading-8 text-gray-700">
-              Cocok untuk anak kos, keluarga, dan pekerja sibuk di Malang.
-              Jadwalkan pickup, lalu lanjutkan harimu seperti biasa.
-            </p>
-          </div>
+          <h1>ulala</h1>
         </section>
       </main>
     </>
