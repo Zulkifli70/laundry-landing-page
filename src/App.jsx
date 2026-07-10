@@ -211,14 +211,21 @@ function App() {
         <section className="layer-section flex min-h-screen items-center bg-sky-50 px-6 py-[calc(var(--header-height)+1em)] md:sticky md:top-0 md:justify-center md:py-0">
           <div className="flex flex-col items-center gap-15 w-full max-w-7xl py-10">
             <h2
-              className="font-extrabold text-3xl text-center md:text-5xl
+              className="font-extrabold text-3xl text-jojo-pink text-center md:text-5xl overflow-visible
             "
             >
-              Mengapa Harus Jojo Laundry ?
+              Mengapa Harus{" "}
+              <span className="relative inline-block px-1">
+                <span className="absolute left-0 -bottom-2 z-0 h-3 w-full rounded-sm bg-jojo-pink/80 -rotate-1 md:-bottom-7 md:h-5"></span>
+                <span className="relative z-10">Jojo Laundry</span>
+              </span>{" "}
+              ?
             </h2>
-            <div className="layer-card flex w-full flex-col gap-5 rounded-3xl p-3 md:w-11/12 md:flex-row md:flex-wrap">
-              <div className="flex flex-col flex-1 items-center gap-5 text-center shadow-md bg-white px-5 p-10 rounded-md">
-                <BadgeCheck size={70} />
+            <div className="layer-card flex w-full flex-col gap-10 md:gap-12 rounded-3xl p-3 md:w-11/12 md:flex-row md:flex-wrap">
+              <div className="flex flex-col flex-1 items-center gap-5 text-center shadow-lg bg-white px-5 p-10 rounded-md">
+                <div className="p-5 rounded-full bg-green-200">
+                  <BadgeCheck size={70} color="green" />
+                </div>
                 <h3 className="layer-title text-xl font-bold text-gray-950 md:text-2xl">
                   Sudah Terpercaya
                 </h3>
@@ -227,8 +234,10 @@ function App() {
                   kami. Proses higienis, aman, dan bergaransi.
                 </p>
               </div>
-              <div className="flex flex-col flex-1 items-center gap-5 text-center shadow-md bg-white px-5 p-10 rounded-md">
-                <HandCoins size={70} />
+              <div className="flex flex-col flex-1 items-center gap-5 text-center shadow-lg bg-white px-5 p-10 rounded-md">
+                <div className="p-5 rounded-full bg-jojo-pink-light">
+                  <HandCoins size={70} color="var(--color-jojo-pink)" />
+                </div>
                 <h3 className="layer-title text-xl font-bold text-gray-950 md:text-2xl">
                   Cuci Kiloan Murah
                 </h3>
@@ -237,8 +246,10 @@ function App() {
                   untuk segala jenis bahan pakaianmu.
                 </p>
               </div>
-              <div className="flex flex-col flex-1 items-center gap-5 text-center shadow-md bg-white px-5 p-10 rounded-md">
-                <Zap size={70} />
+              <div className="flex flex-col flex-1 items-center gap-5 text-center shadow-lg bg-white px-5 p-10 rounded-md">
+                <div className="p-5 rounded-full bg-[#dbeafe]">
+                  <Zap size={70} color="#2563eb" />
+                </div>
                 <h3 className="layer-title text-xl font-bold text-gray-950 md:text-2xl">
                   Layanan Express
                 </h3>
