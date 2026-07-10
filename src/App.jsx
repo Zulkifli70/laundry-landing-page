@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Truck, Zap } from "lucide-react";
+import { Truck, Zap, BadgeCheck, HandCoins } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -89,7 +89,7 @@ function App() {
   return (
     <>
       <header className="flex justify-center h-(--header-height) shadow-lg fixed top-0 left-0 right-0 z-20 backdrop-blur-sm">
-        <div className="flex items-center justify-between w-full h-full md:max-w-4/5 px-7">
+        <div className="flex items-center justify-between w-full max-w-7xl h-full px-7">
           <div className="flex items-center gap-2">
             <img src="/logo.png" alt="logo" className="w-25 md:w-35" />
           </div>
@@ -168,7 +168,7 @@ function App() {
             <div className="hero-copy flex w-full max-w-xl flex-col items-center gap-6 text-center md:flex-1 md:items-start md:text-start">
               <div className="flex flex-col gap-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-jojo-pink">
-                  Laundry express Malang
+                  Laundry Malang
                 </p>
                 <h1 className="text-3xl font-extrabold leading-tight text-jojo-dark sm:text-4xl md:text-5xl lg:text-6xl">
                   Cucian Numpuk?
@@ -208,52 +208,45 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="layer-section flex min-h-screen flex-col items-center justify-start gap-10 bg-sky-50 px-6 py-[calc(var(--header-height)+1em)] md:sticky md:top-0 md:justify-center md:py-0">
-          <h2
-            className="font-extrabold text-3xl text-center
-          "
-          >
-            Mengapa Harus Jojo Laundry ?
-          </h2>
-          <div className="layer-card flex w-full flex-col gap-5 rounded-3xl p-3 md:w-11/12 md:flex-row md:flex-wrap">
-            <div className="flex flex-col flex-1 justify-center gap-3 text-center shadow-md bg-white p-5 rounded-md">
-              <h3 className="layer-title text-3xl font-bold text-gray-950 md:text-5xl">
-                Cuci Kiloan, Setrika, dan Express
-              </h3>
-              <p className="text-lg leading-8 text-gray-700">
-                Pilih layanan sesuai kebutuhan harianmu. Pakaian ditangani rapi,
-                bersih, dan siap dipakai tanpa bikin jadwalmu berantakan.
-              </p>
-            </div>
-
-            <div className="flex flex-col flex-1 justify-center gap-3 text-center shadow-md bg-white p-5 rounded-md">
-              <h3 className="layer-title text-3xl font-bold text-gray-950 md:text-5xl">
-                Cuci Kiloan, Setrika, dan Express
-              </h3>
-              <p className="text-lg leading-8 text-gray-700">
-                Pilih layanan sesuai kebutuhan harianmu. Pakaian ditangani rapi,
-                bersih, dan siap dipakai tanpa bikin jadwalmu berantakan.
-              </p>
-            </div>
-
-            <div className="flex flex-col flex-1 justify-center gap-3 text-center shadow-md bg-white p-5 rounded-md">
-              <h3 className="layer-title text-3xl font-bold text-gray-950 md:text-5xl">
-                Cuci Kiloan, Setrika, dan Express
-              </h3>
-              <p className="text-lg leading-8 text-gray-700">
-                Pilih layanan sesuai kebutuhan harianmu. Pakaian ditangani rapi,
-                bersih, dan siap dipakai tanpa bikin jadwalmu berantakan.
-              </p>
-            </div>
-
-            <div className="flex flex-col flex-1 justify-center gap-3 text-center shadow-md bg-white p-5 rounded-md">
-              <h3 className="layer-title text-3xl font-bold text-gray-950 md:text-5xl">
-                Cuci Kiloan, Setrika, dan Express
-              </h3>
-              <p className="text-lg leading-8 text-gray-700">
-                Pilih layanan sesuai kebutuhan harianmu. Pakaian ditangani rapi,
-                bersih, dan siap dipakai tanpa bikin jadwalmu berantakan.
-              </p>
+        <section className="layer-section flex min-h-screen items-center bg-sky-50 px-6 py-[calc(var(--header-height)+1em)] md:sticky md:top-0 md:justify-center md:py-0">
+          <div className="flex flex-col items-center gap-15 w-full max-w-7xl py-10">
+            <h2
+              className="font-extrabold text-3xl text-center md:text-5xl
+            "
+            >
+              Mengapa Harus Jojo Laundry ?
+            </h2>
+            <div className="layer-card flex w-full flex-col gap-5 rounded-3xl p-3 md:w-11/12 md:flex-row md:flex-wrap">
+              <div className="flex flex-col flex-1 items-center gap-5 text-center shadow-md bg-white px-5 p-10 rounded-md">
+                <BadgeCheck size={70} />
+                <h3 className="layer-title text-xl font-bold text-gray-950 md:text-2xl">
+                  Sudah Terpercaya
+                </h3>
+                <p className="leading-8 text-gray-700">
+                  Ratusan pelanggan telah mempercayakan pakaian mereka kepada
+                  kami. Proses higienis, aman, dan bergaransi.
+                </p>
+              </div>
+              <div className="flex flex-col flex-1 items-center gap-5 text-center shadow-md bg-white px-5 p-10 rounded-md">
+                <HandCoins size={70} />
+                <h3 className="layer-title text-xl font-bold text-gray-950 md:text-2xl">
+                  Cuci Kiloan Murah
+                </h3>
+                <p className="leading-8 text-gray-700">
+                  Dari kaos harian sampai Karpet dan bed cover. Solusi lengkap
+                  untuk segala jenis bahan pakaianmu.
+                </p>
+              </div>
+              <div className="flex flex-col flex-1 items-center gap-5 text-center shadow-md bg-white px-5 p-10 rounded-md">
+                <Zap size={70} />
+                <h3 className="layer-title text-xl font-bold text-gray-950 md:text-2xl">
+                  Layanan Express
+                </h3>
+                <p className="leading-8 text-gray-700">
+                  Butuh pakaian bersih besok pagi? Layanan kilat kami siap
+                  mengembalikan pakaianmu dalam kondisi rapi dan wangi.
+                </p>
+              </div>
             </div>
           </div>
         </section>
