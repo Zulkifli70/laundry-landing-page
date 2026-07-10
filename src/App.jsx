@@ -1,84 +1,8 @@
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useState } from "react";
 import { Truck, Zap, BadgeCheck, HandCoins } from "lucide-react";
-
-gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const mainRef = useRef(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".hero-media", {
-        opacity: 0,
-        y: 48,
-        scale: 0.96,
-        duration: 1,
-        ease: "power3.out",
-      });
-
-      gsap.from(".hero-copy > :not(.hero-cta)", {
-        opacity: 0,
-        y: 28,
-        duration: 0.8,
-        stagger: 0.12,
-        ease: "power3.out",
-      });
-
-      gsap.from(".hero-cta", {
-        y: 16,
-        scale: 0.98,
-        duration: 0.7,
-        ease: "power3.out",
-      });
-
-      gsap.utils.toArray(".layer-section").forEach((section, index) => {
-        gsap.set(section, { zIndex: index + 1 });
-
-        const layerCard = section.querySelector(".layer-card");
-        const layerTitles = section.querySelectorAll(".layer-title");
-
-        gsap.fromTo(
-          layerCard,
-          {
-            opacity: 0,
-            y: 90,
-            scale: 0.92,
-            clipPath: "inset(18% 8% 0% 8% round 24px)",
-          },
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            clipPath: "inset(0% 0% 0% 0% round 24px)",
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: section,
-              start: "top 72%",
-              end: "top 18%",
-              scrub: 1,
-            },
-          },
-        );
-
-        gsap.from(layerTitles, {
-          opacity: 0,
-          y: 24,
-          duration: 0.7,
-          stagger: 0.08,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 55%",
-          },
-        });
-      });
-    }, mainRef);
-
-    return () => ctx.revert();
-  }, []);
 
   const navLinks = [
     { label: "Jojo Laundry", href: "#" },
@@ -166,7 +90,7 @@ function App() {
         </nav>
       </div>
 
-      <main ref={mainRef}>
+      <main>
         <section className="flex min-h-screen justify-center overflow-hidden bg-linear-to-b from-white via-white to-jojo-pink-light pt-(--header-height)">
           <div className="flex w-full max-w-7xl flex-col items-center justify-center gap-6 px-6 py-8 sm:px-8 md:flex-row-reverse md:gap-10 md:py-12 lg:gap-16">
             <div className="hero-media flex w-full justify-center md:flex-1">
