@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { Truck, Zap, BadgeCheck, HandCoins } from "lucide-react";
+import {
+  Truck,
+  Zap,
+  BadgeCheck,
+  HandCoins,
+  Phone,
+  Mail,
+  Navigation,
+} from "lucide-react";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +27,27 @@ function App() {
     { label: "Sprei", image: "/sprei.png" },
     { label: "Selimut", image: "/selimut.png" },
     { label: "Sepatu", image: "/sepatu.png" },
+  ];
+
+  const locations = [
+    {
+      nama: "Merjosari",
+      jalan: "Jl Kenangan",
+      gambar: "/hero.png",
+      jadwal: "Senin-Jumat: 7.00-17-00",
+    },
+    {
+      nama: "Sigura-gura",
+      jalan: "Jl Sigura gura",
+      gambar: "/hero.png",
+      jadwal: "Senin-Jumat: 7.00-17-00",
+    },
+    {
+      nama: "Sengkaling",
+      jalan: "Jl Sengkaling",
+      gambar: "/hero.png",
+      jadwal: "Senin-Jumat: 7.00-17-00",
+    },
   ];
 
   return (
@@ -224,7 +253,78 @@ function App() {
           </div>
         </section>
         <section className="layer-section flex min-h-screen items-center justify-center bg-amber-50 px-6 py-[calc(var(--header-height)+1em)] md:top-0 md:h-screen md:py-0">
-          <h1>ulala</h1>
+          <div className="flex w-full max-w-7xl flex-col items-center justify-center gap-6 px-6 py-8 sm:px-8 md:gap-10 md:py-12 lg:gap-16">
+            <div className="flex flex-col gap-5">
+              <h2
+                className="font-extrabold text-3xl text-jojo-pink text-center md:text-5xl
+                        "
+              >
+                Lokasi Kami
+              </h2>
+              <p>Temukan cabang Jojo Laundry terdekat dari rumahmu</p>
+            </div>
+            {/* Parent Card */}
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {/* Card */}
+              {locations.map((loc) => (
+                <div
+                  key={loc.nama}
+                  className="group relative flex flex-col overflow-hidden rounded-xl border border-pink-100 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div className="absolute bottom-0 left-0 top-0 z-10 h-full w-1.5 bg-jojo-pink"></div>
+                  <div className="h-48 overflow-hidden">
+                    <img
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      data-alt={loc.nama}
+                      data-location={loc.nama}
+                      src={loc.gambar}
+                    />
+                  </div>
+                  <div className="flex grow flex-col p-6">
+                    <div className="mb-3 flex items-start justify-between">
+                      <h3 className="text-xl font-bold text-jojo-dark">
+                        {loc.nama}
+                      </h3>
+                    </div>
+                    <p className="mb-4 text-sm leading-6 text-jojo-gray">
+                      {loc.jalan}
+                    </p>
+                    <div className="mb-5 flex flex-col gap-1 text-sm text-jojo-gray sm:flex-row sm:items-center sm:gap-3">
+                      <span>Jam Buka</span>
+                      <span className="font-semibold text-jojo-dark">
+                        {loc.jadwal}
+                      </span>
+                    </div>
+                    <div className="mt-auto flex items-center justify-between gap-4 border-t border-pink-100 pt-4">
+                      <div className="flex gap-3">
+                        <a
+                          className="flex h-10 w-10 items-center justify-center rounded-full bg-jojo-pink-light text-jojo-pink transition-colors hover:bg-jojo-pink hover:text-white"
+                          href="tel:+62215550123"
+                          title="Telepon"
+                        >
+                          <Phone size={18} />
+                        </a>
+                        <a
+                          className="flex h-10 w-10 items-center justify-center rounded-full bg-jojo-pink-light text-jojo-pink transition-colors hover:bg-jojo-pink hover:text-white"
+                          href="mailto:hq@geolocate.co.id"
+                          title="Email"
+                        >
+                          <Mail size={18} />
+                        </a>
+                      </div>
+                      <a
+                        className="flex items-center gap-2 text-sm font-semibold text-jojo-pink hover:underline"
+                        href="#"
+                      >
+                        <Navigation size={18} />
+                        Petunjuk Jalan
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
       </main>
     </>
