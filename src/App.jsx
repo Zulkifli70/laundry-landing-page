@@ -143,7 +143,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="layer-section flex min-h-screen items-center bg-sky-50 px-6 py-[calc(var(--header-height)+1em)] md:sticky md:top-0 md:justify-center md:py-0">
+        <section className="layer-section flex min-h-screen items-center bg-sky-50 px-6 py-[calc(var(--header-height)+1em)] md:top-0 md:justify-center md:py-0">
           <div className="flex flex-col items-center gap-15 w-full max-w-7xl py-10">
             <h2
               className="font-extrabold text-3xl text-jojo-pink text-center md:text-5xl
@@ -196,7 +196,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="layer-section flex flex-col min-h-screen items-center justify-center bg-emerald-50 px-6 py-[calc(var(--header-height)+1em)] md:sticky md:top-0 md:h-screen md:py-0 md:gap-15">
+        <section className="layer-section flex flex-col min-h-screen items-center justify-center bg-emerald-50 px-6 py-[calc(var(--header-height)+1em)]  md:top-0 md:h-screen md:py-0 md:gap-15">
           <h2
             className="font-extrabold text-3xl text-jojo-pink text-center md:text-5xl
           "
@@ -223,7 +223,7 @@ function App() {
             ))}
           </div>
         </section>
-        <section className="layer-section flex min-h-screen items-center justify-center bg-amber-50 px-6 py-[calc(var(--header-height)+1em)] md:sticky md:top-0 md:h-screen md:py-0">
+        <section className="layer-section flex min-h-screen items-center justify-center bg-amber-50 px-6 py-[calc(var(--header-height)+1em)] md:top-0 md:h-screen md:py-0">
           <h1>ulala</h1>
         </section>
       </main>
