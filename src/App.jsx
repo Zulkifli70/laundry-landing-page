@@ -86,6 +86,18 @@ function App() {
     { label: "Location", href: "#" },
     { label: "Contact Us", href: "#" },
   ];
+
+  const serviceItems = [
+    { label: "Pakaian", image: "/baju.png" },
+    { label: "Boneka", image: "/boneka.png" },
+    { label: "Karpet", image: "/karpet.png" },
+    { label: "Tas", image: "/tas.png" },
+    { label: "Helm", image: "/helm.png" },
+    { label: "Sprei", image: "/sprei.png" },
+    { label: "Selimut", image: "/selimut.png" },
+    { label: "Sepatu", image: "/sepatu.png" },
+  ];
+
   return (
     <>
       <header className="flex justify-center h-(--header-height) shadow-lg fixed top-0 left-0 right-0 z-20 backdrop-blur-sm">
@@ -211,7 +223,7 @@ function App() {
         <section className="layer-section flex min-h-screen items-center bg-sky-50 px-6 py-[calc(var(--header-height)+1em)] md:sticky md:top-0 md:justify-center md:py-0">
           <div className="flex flex-col items-center gap-15 w-full max-w-7xl py-10">
             <h2
-              className="font-extrabold text-3xl text-jojo-pink text-center md:text-5xl overflow-visible
+              className="font-extrabold text-3xl text-jojo-pink text-center md:text-5xl
             "
             >
               Mengapa Harus{" "}
@@ -261,117 +273,31 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="layer-section flex flex-col min-h-screen items-center justify-center bg-emerald-50 px-6 py-[calc(var(--header-height)+1em)] md:sticky md:top-0 md:h-screen md:py-0 md:gap-5">
+        <section className="layer-section flex flex-col min-h-screen items-center justify-center bg-emerald-50 px-6 py-[calc(var(--header-height)+1em)] md:sticky md:top-0 md:h-screen md:py-0 md:gap-15">
           <h2
-            className="font-extrabold text-3xl text-center
+            className="font-extrabold text-3xl text-jojo-pink text-center md:text-5xl
           "
           >
             Layanan Jojo Laundry
           </h2>
-          <div className="layer-card grid w-full grid-cols-2 gap-3 rounded-3xl p-3 sm:grid-cols-4 md:w-11/12 md:grid-cols-4 md:grid-rows-2 md:gap-4 lg:max-w-6xl">
-            <div className="flex h-40 flex-col justify-between gap-2 rounded-md bg-white p-4 text-center shadow-md md:h-52 lg:h-56">
-              <div className="flex h-24 items-center justify-center md:h-32">
-                <img
-                  src="/baju.png"
-                  alt=""
-                  className="h-full w-full object-contain"
-                />
+          <div className="layer-card grid w-full grid-cols-2 gap-3 rounded-3xl p-3 text-jojo-pink sm:grid-cols-4 md:w-11/12 md:grid-cols-4 md:grid-rows-2 md:gap-4 lg:max-w-6xl">
+            {serviceItems.map((item) => (
+              <div
+                key={item.label}
+                className="flex h-40 min-h-40 flex-col justify-between gap-2 rounded-md bg-white p-4 text-center shadow-md md:h-52 md:min-h-52 lg:h-56 lg:min-h-56"
+              >
+                <div className="flex h-24 shrink-0 items-center justify-center md:h-32">
+                  <img
+                    src={item.image}
+                    alt=""
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <h3 className="layer-title flex h-9 shrink-0 items-center justify-center text-2xl font-bold leading-none text-jojo-pink md:h-11 md:text-3xl lg:h-12 lg:text-4xl">
+                  {item.label}
+                </h3>
               </div>
-              <h3 className="layer-title text-2xl font-bold text-gray-950 md:text-3xl lg:text-4xl">
-                Pakaian
-              </h3>
-            </div>
-
-            <div className="flex h-40 flex-col justify-between gap-2 rounded-md bg-white p-4 text-center shadow-md md:h-52 lg:h-56">
-              <div className="flex h-24 items-center justify-center md:h-32">
-                <img
-                  src="/boneka.png"
-                  alt=""
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <h3 className="layer-title text-2xl font-bold text-gray-950 md:text-3xl lg:text-4xl">
-                Boneka
-              </h3>
-            </div>
-
-            <div className="flex h-40 flex-col justify-between gap-2 rounded-md bg-white p-4 text-center shadow-md md:h-52 lg:h-56">
-              <div className="flex h-24 items-center justify-center md:h-32">
-                <img
-                  src="/karpet.png"
-                  alt=""
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <h3 className="layer-title text-2xl font-bold text-gray-950 md:text-3xl lg:text-4xl">
-                Karpet
-              </h3>
-            </div>
-
-            <div className="flex h-40 flex-col justify-between gap-2 rounded-md bg-white p-4 text-center shadow-md md:h-52 lg:h-56">
-              <div className="flex h-24 items-center justify-center md:h-32">
-                <img
-                  src="/tas.png"
-                  alt=""
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <h3 className="layer-title text-2xl font-bold text-gray-950 md:text-3xl lg:text-4xl">
-                Tas
-              </h3>
-            </div>
-
-            <div className="flex h-40 flex-col justify-between gap-2 rounded-md bg-white p-4 text-center shadow-md md:h-52 lg:h-56">
-              <div className="flex h-24 items-center justify-center md:h-32">
-                <img
-                  src="/helm.png"
-                  alt=""
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <h3 className="layer-title text-2xl font-bold text-gray-950 md:text-3xl lg:text-4xl">
-                Helm
-              </h3>
-            </div>
-
-            <div className="flex h-40 flex-col justify-between gap-2 rounded-md bg-white p-4 text-center shadow-md md:h-52 lg:h-56">
-              <div className="flex h-24 items-center justify-center md:h-32">
-                <img
-                  src="/sprei.png"
-                  alt=""
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <h3 className="layer-title text-2xl font-bold text-gray-950 md:text-3xl lg:text-4xl">
-                Sprei
-              </h3>
-            </div>
-
-            <div className="flex h-40 flex-col justify-between gap-2 rounded-md bg-white p-4 text-center shadow-md md:h-52 lg:h-56">
-              <div className="flex h-24 items-center justify-center md:h-32">
-                <img
-                  src="/selimut.png"
-                  alt=""
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <h3 className="layer-title text-2xl font-bold text-gray-950 md:text-3xl lg:text-4xl">
-                Selimut
-              </h3>
-            </div>
-
-            <div className="flex h-40 flex-col justify-between gap-2 rounded-md bg-white p-4 text-center shadow-md md:h-52 lg:h-56">
-              <div className="flex h-24 items-center justify-center md:h-32">
-                <img
-                  src="/sepatu.png"
-                  alt=""
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <h3 className="layer-title text-2xl font-bold text-gray-950 md:text-3xl lg:text-4xl">
-                Sepatu
-              </h3>
-            </div>
+            ))}
           </div>
         </section>
         <section className="layer-section flex min-h-screen items-center justify-center bg-amber-50 px-6 py-[calc(var(--header-height)+1em)] md:sticky md:top-0 md:h-screen md:py-0">
