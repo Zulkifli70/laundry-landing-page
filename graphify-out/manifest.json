@@ -1,0 +1,32 @@
+{
+  "eslint.config.js": {
+    "mtime": 1783422315.8002086,
+    "ast_hash": "3aa4b57d7f08181d86bde52a4dcb7f22",
+    "semantic_hash": "3aa4b57d7f08181d86bde52a4dcb7f22"
+  },
+  "opencode.json": {
+    "mtime": 1784864739.3025188,
+    "ast_hash": "87682346061f7d53da60da4161c89776",
+    "semantic_hash": "87682346061f7d53da60da4161c89776"
+  },
+  "package.json": {
+    "mtime": 1783671141.7295449,
+    "ast_hash": "da909b461798eec3173088275abe1c32",
+    "semantic_hash": "da909b461798eec3173088275abe1c32"
+  },
+  "src/App.jsx": {
+    "mtime": 1784865163.7341008,
+    "ast_hash": "e96bffc486316bbd49e0d4bf9d43b7d1",
+    "semantic_hash": "e96bffc486316bbd49e0d4bf9d43b7d1"
+  },
+  "src/main.jsx": {
+    "mtime": 1783422305.4906533,
+    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
+  },
+  "vite.config.js": {
+    "mtime": 1783422601.1227088,
+    "ast_hash": "a545815e9774665a916fe473809fbd87",
+    "semantic_hash": "a545815e9774665a916fe473809fbd87"
+  }
+}
