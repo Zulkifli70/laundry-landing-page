@@ -31,18 +31,18 @@ function ServiceCard({ item }) {
   return (
     <div
       ref={cardRef}
-      className="opacity-0 translate-y-8 scale-95 overflow-hidden rounded-lg bg-white border border-slate-200 shadow-sm hover:shadow-lg hover:border-rose-200/50 transition-all duration-500"
+      className="opacity-0 translate-y-8 scale-95 feature-photo-card overflow-hidden text-on-dark"
     >
-      <div className="aspect-[4/3] overflow-hidden bg-slate-50 p-6 flex items-center justify-center">
+      <div className="aspect-[4/3] overflow-hidden">
         <img
           src={item.image}
           alt=""
-          className="h-full w-full object-contain transition-transform duration-700 hover:scale-110"
+          className="w-full h-full object-contain transition-transform duration-700 hover:scale-110"
         />
       </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-navy mb-1.5">{item.label}</h3>
-        <p className="text-sm text-slate leading-relaxed">{item.desc}</p>
+      <div className="pt-5">
+        <h3 className="text-title-lg text-on-dark mb-1.5">{item.label}</h3>
+        <p className="text-body-sm text-body leading-relaxed">{item.desc}</p>
       </div>
     </div>
   );
@@ -68,23 +68,30 @@ export function Services() {
   }, []);
 
   return (
-    <section id="services" className="py-24 md:py-32 px-6 md:px-10 bg-slate-light/50">
-      <div className="max-w-7xl mx-auto">
+    <section
+      id="services"
+      className="bg-surface-soft px-6 md:px-10"
+      style={{ paddingTop: "96px", paddingBottom: "96px" }}
+    >
+      <div className="max-w-[1440px] mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-rose-50 text-rose text-xs font-semibold uppercase tracking-[0.15em] mb-4">
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-surface-card border border-hairline text-m-blue-light text-xs font-semibold uppercase tracking-[0.15em] mb-6">
             <Shirt size={12} />
             Layanan
           </span>
-          <h2 className="text-3xl md:text-5xl font-black text-navy leading-tight">
-            Jenis Layanan{" "}
-            <span className="gradient-accent">Kami</span>
+          <h2 className="text-display-lg text-on-dark">
+            Jenis Layanan <span className="text-m-blue-dark">Kami</span>
           </h2>
-          <p className="text-slate mt-3 text-sm">
-            Kami menangani berbagai jenis bahan dan barang dengan teknik pencucian yang sesuai.
+          <p className="text-body-md text-body mt-3">
+            Kami menangani berbagai jenis bahan dan barang dengan teknik
+            pencucian yang sesuai.
           </p>
         </div>
 
-        <div ref={serviceRefs} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-5">
+        <div
+          ref={serviceRefs}
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-5"
+        >
           {serviceItems.map((item) => (
             <ServiceCard key={item.label} item={item} />
           ))}

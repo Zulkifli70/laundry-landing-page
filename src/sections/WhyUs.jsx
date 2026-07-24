@@ -30,14 +30,14 @@ function WhyCard({ item }) {
   return (
     <div
       ref={cardRef}
-      className="opacity-0 translate-x-[-30px] flex gap-4 p-5 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-slate-200 transition-all duration-400"
+      className="opacity-0 translate-x-[-30px] flex gap-5 p-6 feature-photo-card transition-all duration-400"
     >
-      <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-rose-50 text-rose transition-all duration-400 hover:bg-rose hover:text-white">
+      <div className="flex size-12 shrink-0 items-center justify-center rounded-none bg-surface-elevated border border-hairline text-m-blue-light transition-all duration-400">
         <item.icon size={22} />
       </div>
       <div>
-        <h3 className="text-base font-bold text-navy mb-1">{item.title}</h3>
-        <p className="text-sm text-slate leading-relaxed">{item.desc}</p>
+        <h3 className="text-title-md text-on-dark mb-1">{item.title}</h3>
+        <p className="text-body-sm text-body leading-relaxed">{item.desc}</p>
       </div>
     </div>
   );
@@ -45,16 +45,16 @@ function WhyCard({ item }) {
 
 export function WhyUs() {
   return (
-    <section id="why" className="py-24 md:py-32 px-6 md:px-10 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="why" className="bg-canvas px-6 md:px-10" style={{ paddingTop: "96px", paddingBottom: "96px" }}>
+      <div className="max-w-[1440px] mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-rose-50 text-rose text-xs font-semibold uppercase tracking-[0.15em] mb-4">
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-surface-card border border-hairline text-m-blue-light text-xs font-semibold uppercase tracking-[0.15em] mb-6">
             <Award size={12} />
             Keunggulan
           </span>
-          <h2 className="text-3xl md:text-5xl font-black text-navy leading-tight">
+          <h2 className="text-display-lg text-on-dark">
             Mengapa Memilih{" "}
-            <span className="gradient-accent">Jojo Laundry?</span>
+            <span className="text-m-blue-dark">Jojo Laundry?</span>
           </h2>
         </div>
 

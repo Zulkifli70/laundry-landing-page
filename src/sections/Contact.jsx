@@ -2,77 +2,77 @@ import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
 
 export function Contact() {
   return (
-    <section id="contact" className="py-24 md:py-32 px-6 md:px-10 bg-navy">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+    <section id="contact" className="bg-canvas px-6 md:px-10" style={{ paddingTop: "96px", paddingBottom: "96px" }}>
+      <div className="max-w-[1440px] mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           <div>
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/5 border border-white/10 text-amber-300 text-xs font-semibold uppercase tracking-[0.15em] mb-4">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-surface-card border border-hairline text-m-blue-light text-xs font-semibold uppercase tracking-[0.15em] mb-6">
               <MessageCircle size={12} />
               Hubungi Kami
             </span>
-            <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-5">
+            <h2 className="text-display-lg text-on-dark mb-6">
               Siap Membantu
               <br />
-              <span className="gradient-accent">Kebutuhan Laundry</span> Anda
+              <span className="text-m-blue-dark">Kebutuhan Laundry</span> Anda
             </h2>
-            <p className="text-slate-300/70 text-sm leading-relaxed mb-8 max-w-md">
+            <p className="text-body-md text-body leading-relaxed mb-10 max-w-md">
               Isi form atau hubungi kami langsung melalui WhatsApp. Tim kami akan merespon
               dalam waktu kurang dari 30 menit.
             </p>
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <div className="size-10 rounded-lg bg-white/5 flex items-center justify-center">
-                  <Phone size={18} className="text-rose" />
+            <div className="space-y-5">
+              <div className="flex items-center gap-4">
+                <div className="size-10 rounded-none bg-surface-card border border-hairline flex items-center justify-center">
+                  <Phone size={18} className="text-m-blue-light" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400">Telepon</div>
-                  <div className="text-sm font-semibold text-white">0822-xxxx-xxxx</div>
+                  <div className="text-caption text-muted">Telepon</div>
+                  <div className="text-body-sm font-bold text-on-dark">0822-xxxx-xxxx</div>
                 </div>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="size-10 rounded-lg bg-white/5 flex items-center justify-center">
-                  <Mail size={18} className="text-rose" />
+              <div className="flex items-center gap-4">
+                <div className="size-10 rounded-none bg-surface-card border border-hairline flex items-center justify-center">
+                  <Mail size={18} className="text-m-blue-light" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400">Email</div>
-                  <div className="text-sm font-semibold text-white">hello@jojolaundry.id</div>
+                  <div className="text-caption text-muted">Email</div>
+                  <div className="text-body-sm font-bold text-on-dark">hello@jojolaundry.id</div>
                 </div>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="size-10 rounded-lg bg-white/5 flex items-center justify-center">
-                  <MapPin size={18} className="text-rose" />
+              <div className="flex items-center gap-4">
+                <div className="size-10 rounded-none bg-surface-card border border-hairline flex items-center justify-center">
+                  <MapPin size={18} className="text-m-blue-light" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400">Jam Operasional</div>
-                  <div className="text-sm font-semibold text-white">Senin - Sabtu, 07.00 - 17.00</div>
+                  <div className="text-caption text-muted">Jam Operasional</div>
+                  <div className="text-body-sm font-bold text-on-dark">Senin - Sabtu, 07.00 - 17.00</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-xl">
-            <h3 className="text-xl font-bold text-navy mb-5">Form Booking</h3>
+          <div className="bg-surface-card border border-hairline p-6 md:p-8">
+            <h3 className="text-title-lg text-on-dark mb-6">Form Booking</h3>
             <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div>
-                <label className="block text-xs font-semibold text-slate mb-1.5 uppercase tracking-wider">Nama Lengkap</label>
+                <label className="block text-label-uppercase text-muted mb-1.5">Nama Lengkap</label>
                 <input
                   type="text"
                   placeholder="Masukkan nama Anda"
-                  className="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm text-navy placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-rose/20 focus:border-rose transition-all"
+                  className="text-input"
                 />
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-xs font-semibold text-slate mb-1.5 uppercase tracking-wider">No. Telepon</label>
+                  <label className="block text-label-uppercase text-muted mb-1.5">No. Telepon</label>
                   <input
                     type="tel"
                     placeholder="08xx-xxxx-xxxx"
-                    className="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm text-navy placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-rose/20 focus:border-rose transition-all"
+                    className="text-input"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-slate mb-1.5 uppercase tracking-wider">Layanan</label>
-                  <select className="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm text-navy bg-white focus:outline-none focus:ring-2 focus:ring-rose/20 focus:border-rose transition-all appearance-none">
+                  <label className="block text-label-uppercase text-muted mb-1.5">Layanan</label>
+                  <select className="text-input bg-surface-card text-on-dark appearance-none">
                     <option>Pilih layanan</option>
                     <option>Cuci + Setrika</option>
                     <option>Cuci Kering</option>
@@ -82,23 +82,23 @@ export function Contact() {
                 </div>
               </div>
               <div>
-                <label className="block text-xs font-semibold text-slate mb-1.5 uppercase tracking-wider">Alamat Jemput</label>
+                <label className="block text-label-uppercase text-muted mb-1.5">Alamat Jemput</label>
                 <textarea
                   rows={2}
                   placeholder="Masukkan alamat lengkap"
-                  className="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm text-navy placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-rose/20 focus:border-rose transition-all resize-none"
+                  className="text-input resize-none"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2.5 bg-navy text-white py-3.5 rounded-lg text-sm font-bold hover:bg-navy-light transition-all duration-300"
+                className="w-full btn-primary"
               >
                 <MessageCircle size={16} />
                 Kirim Permintaan Booking
               </button>
-              <p className="text-xs text-center text-slate-300">
+              <p className="text-caption text-center text-muted">
                 Atau hubungi langsung via{" "}
-                <a href="#" className="text-rose font-semibold hover:underline">WhatsApp</a>
+                <a href="#" className="text-link text-m-blue-light text-sm">WhatsApp</a>
               </p>
             </form>
           </div>

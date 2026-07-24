@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { navLinks } from "../data";
-import { NavLink } from "./NavLink";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,23 +17,27 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100"
-            : "bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-50 top-nav transition-all duration-500 ${
+          scrolled ? "border-b border-hairline" : ""
         }`}
       >
-        <div className="flex items-center justify-between w-full max-w-7xl h-(--header-height) mx-auto px-6 md:px-10">
+        <div className="flex items-center justify-between w-full max-w-[1440px] h-(--header-height) mx-auto px-6 md:px-10">
           <a href="#home" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Jojo Laundry" className="w-24 md:w-28 transition-transform duration-300" />
+            <img src="/logo.png" alt="Jojo Laundry" className="h-8 md:h-10 transition-transform duration-300" />
           </a>
-          <nav className="hidden md:flex md:items-center md:gap-1">
+          <nav className="hidden md:flex md:items-center md:gap-1 text-nav-link">
             {navLinks.map((link) => (
-              <NavLink key={link.label} href={link.href} label={link.label} />
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-body hover:text-on-dark transition-colors duration-300 px-3 py-2 text-label-uppercase"
+              >
+                {link.label}
+              </a>
             ))}
             <a
               href="#contact"
-              className="ml-4 flex items-center gap-2 bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-all duration-300 shadow-sm"
+              className="ml-4 btn-primary"
             >
               Booking
               <ArrowRight size={16} />
@@ -43,9 +46,9 @@ export function Header() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close" : "Menu"}
-            className="relative size-9 md:hidden rounded-lg border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-all"
+            className="relative size-9 md:hidden rounded-none border border-hairline bg-surface-card flex items-center justify-center hover:bg-surface-elevated transition-all text-on-dark"
           >
-            {isOpen ? <X size={18} className="text-navy" /> : <Menu size={18} className="text-navy" />}
+            {isOpen ? <X size={18} className="text-on-dark" /> : <Menu size={18} className="text-on-dark" />}
           </button>
         </div>
       </header>
@@ -53,16 +56,17 @@ export function Header() {
       {/* Mobile nav */}
       <div
         className={`fixed top-(--header-height) left-0 right-0 z-40 md:hidden transition-all duration-300 overflow-hidden ${
-          isOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="flex flex-col gap-1 p-5 bg-white border-b border-slate-100 shadow-lg">
+        <nav className="flex flex-col gap-1 p-5 bg-canvas border-b border-hairline shadow-lg">
+          <div className="m-stripe-divider mb-4" />
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={closeMenu}
-              className="py-3 px-4 text-navy font-medium rounded-lg hover:bg-slate-50 transition-all"
+              className="py-3 px-4 text-label-uppercase text-body hover:text-on-dark transition-colors"
             >
               {link.label}
             </a>
@@ -70,7 +74,7 @@ export function Header() {
           <a
             href="#contact"
             onClick={closeMenu}
-            className="mt-2 flex items-center justify-center gap-2 bg-navy text-white py-3 rounded-lg font-semibold"
+            className="mt-2 btn-primary w-full"
           >
             Booking Sekarang
             <ArrowRight size={16} />
