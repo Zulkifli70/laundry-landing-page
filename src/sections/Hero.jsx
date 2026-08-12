@@ -99,59 +99,56 @@ export function Hero() {
         </div>
 
         <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-10 pt-(--header-height) pb-[96px]">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-            <div className="order-2 md:order-1">
-              <div className="hero-badge inline-flex items-center gap-2 px-3 py-1.5 rounded-none bg-surface-card border border-hairline text-m-blue-light text-xs font-semibold uppercase tracking-[0.15em] mb-6">
-                <Sparkles size={12} />
-                Laundry Profesional Malang
-              </div>
-              <h1 className="hero-line text-display-xl text-on-dark mb-4">
-                Solusi Cuci
-              </h1>
-              <h1 className="hero-line text-display-xl text-on-dark mb-4">
-                <span className="text-m-blue-dark">Profesional</span>
-              </h1>
-              <h1 className="hero-line text-display-xl text-on-dark mb-8">
-                untuk Anda
-              </h1>
-              <p className="hero-sub text-body-md text-body-strong max-w-lg mb-10">
-                Jemput, cuci, setrika, dan antar kembali — dengan standar
-                kebersihan tertinggi. Tanpa Anda harus keluar rumah.
-              </p>
-              <div className="hero-cta flex flex-col sm:flex-row gap-4 mb-10">
-                <a
-                  href="#contact"
-                  className="btn-primary"
-                >
-                  Booking Sekarang
-                  <ArrowRight size={16} />
-                </a>
-                <a
-                  href="#services"
-                  className="btn-primary-outline"
-                >
-                  Lihat Layanan
-                </a>
-              </div>
-              <div className="hero-sub flex items-center gap-5 mt-4 text-body-sm text-body">
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 size={15} className="text-m-blue-light" />
-                  Gratis antar jemput
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <Clock size={15} className="text-m-red" />
-                  8 jam kilat
-                </span>
-              </div>
+          <div className="flex flex-col items-center text-center">
+            <div className="hero-badge inline-flex items-center gap-2 px-3 py-1.5 rounded-none bg-surface-card border border-hairline text-m-blue-light text-xs font-semibold uppercase tracking-[0.15em] mb-6">
+              <Sparkles size={12} />
+              Laundry Profesional Malang
             </div>
-
-            <div className="hero-img order-1 md:order-2 flex justify-center">
+            <h1 className="hero-line text-display-xl text-on-dark mb-4">
+              Solusi Cuci
+            </h1>
+            <h1 className="hero-line text-display-xl text-on-dark mb-4">
+              <span className="text-m-blue-dark">Profesional</span>
+            </h1>
+            <h1 className="hero-line text-display-xl text-on-dark mb-8">
+              untuk Anda
+            </h1>
+            <p className="hero-sub text-body-md text-body-strong max-w-lg mx-auto mb-10">
+              Jemput, cuci, setrika, dan antar kembali — dengan standar
+              kebersihan tertinggi. Tanpa Anda harus keluar rumah.
+            </p>
+            <div className="hero-cta flex flex-col sm:flex-row gap-4 mb-10">
+              <a
+                href="#contact"
+                className="btn-primary"
+              >
+                Booking Sekarang
+                <ArrowRight size={16} />
+              </a>
+              <a
+                href="#services"
+                className="btn-primary-outline"
+              >
+                Lihat Layanan
+              </a>
+            </div>
+            <div className="hero-sub flex items-center justify-center gap-5 mt-4 text-body-sm text-body">
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 size={15} className="text-m-blue-light" />
+                Gratis antar jemput
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Clock size={15} className="text-m-red" />
+                8 jam kilat
+              </span>
+            </div>
+            <div className="hero-img mt-16 md:mt-20">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-m-blue-dark/10 via-m-blue-dark/5 to-m-red/10 rounded-none blur-2xl" />
                 <img
                   src="/hero4.png"
                   alt="Jojo Laundry"
-                  className="relative h-[30vh] sm:h-[35vh] md:h-[55vh] lg:h-[65vh] object-contain"
+                  className="relative h-[30vh] sm:h-[35vh] md:h-[45vh] lg:h-[55vh] object-contain"
                 />
               </div>
             </div>
