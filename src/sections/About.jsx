@@ -9,7 +9,7 @@ export function About() {
             <div className="aspect-[4/3] overflow-hidden">
               <img src="/hero.png" alt="Jojo Laundry" className="w-full h-full object-cover" />
             </div>
-            <div className="absolute -bottom-5 -right-5 bg-surface-card text-on-dark p-5">
+            <div className="absolute -bottom-5 -right-5 glass text-on-dark p-5">
               <div className="text-display-sm text-on-dark">8+</div>
               <div className="text-label-uppercase text-body text-xs">Tahun Pengalaman</div>
             </div>

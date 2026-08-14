@@ -50,7 +50,7 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="bg-surface-card border border-hairline p-6 md:p-8">
+          <div className="glass p-6 md:p-8">
             <h3 className="text-title-lg text-on-dark mb-6">Form Booking</h3>
             <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div>
